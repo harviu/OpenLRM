@@ -5,6 +5,11 @@ This script is designed to render data used in the [OpenLRM project](https://git
 Modified from https://github.com/cvlab-columbia/zero123/blob/main/objaverse-rendering/scripts/blender_script.py
 Original script licensed under MIT, found at the root of its repository.
 Modifications are licensed under Apache 2.0.
+
+Example usage:
+    blender -b -P blender_script.py -- \
+        --object_path my_object.glb \
+        --output_dir ./views \
 """
 
 import argparse
@@ -29,7 +34,7 @@ parser.add_argument(
 )
 parser.add_argument("--output_dir", type=str, default="./views")
 parser.add_argument(
-    "--engine", type=str, default="CYCLES", choices=["CYCLES", "BLENDER_EEVEE"]
+    "--engine", type=str, default="CYCLES", choices=["CYCLES", "BLENDER_EEVEE_NEXT"]
 )
 parser.add_argument("--num_images", type=int, default=32)
 parser.add_argument("--resolution", type=int, default=1024)

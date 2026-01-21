@@ -50,3 +50,12 @@ Thumbs.db
 *.swp
 *.swo
 *.~*
+
+# Ignore log files
+logs/
+exps/
+scripts/hpc/render_jobs/
+*.out
+
+# Ignore output dumps
+dumps/

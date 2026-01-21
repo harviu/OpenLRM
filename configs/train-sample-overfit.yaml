@@ -3,7 +3,7 @@ experiment:
     type: lrm
     seed: 42
     parent: lrm-objaverse
-    child: small-dummyrun
+    child: overfit
 
 model:
     camera_embed_dim: 1024
@@ -25,8 +25,8 @@ dataset:
             root_dirs:
                 - /mnt/home/lihao/.objaverse/views
             meta_path:
-                train: /mnt/home/lihao/.objaverse/views/train_uids.json
-                val: /mnt/home/lihao/.objaverse/views/val_uids.json
+                train: /mnt/home/lihao/.objaverse/views/train_uids_overfit.json
+                val: /mnt/home/lihao/.objaverse/views/train_uids_overfit.json
             sample_rate: 1.0
     sample_side_views: 3
     source_image_res: 224
@@ -37,8 +37,8 @@ dataset:
     normalize_camera: true
     normed_dist_to_center: auto
     num_all_views: 32
-    num_train_workers: 4
-    num_val_workers: 2
+    num_train_workers: 1
+    num_val_workers: 1
     pin_mem: true
 
 train:
@@ -57,13 +57,13 @@ train:
     scheduler:
         type: cosine
         warmup_real_iters: 3000
-    batch_size: 16  # REPLACE THIS (PER GPU)
+    batch_size: 1  # REPLACE THIS (PER GPU)
     accum_steps: 1  # REPLACE THIS
     epochs: 2000  # REPLACE THIS
     debug_global_steps: null
 
 val:
-    batch_size: 4
+    batch_size: 1
     global_step_period: 1000
     debug_batches: null
 
