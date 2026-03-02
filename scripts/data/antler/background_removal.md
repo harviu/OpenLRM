@@ -51,11 +51,11 @@ expansion_ratio (COLMAP): 1.2
 
 | Metric | Result |
 |--------|--------|
-| Total images processed | 520 (13 antlers, ~40 images each) |
-| Success rate (clean backgrounds) | 92% |
-| Outliers detected per antler | 3-8 images (5-15%) |
-| Human-antler contact failure rate | 35% |
-| Processing time per image (GPU) | 2-3 minutes |
+| Total images processed |  |
+| Success rate (clean backgrounds) | |
+| Outliers detected per antler |  |
+| Human-antler contact failure rate |  |
+| Processing time per image (GPU) | |
 
 ### What Worked Well
 
